@@ -1,0 +1,2 @@
+rootProject.name='Shoe Rank'
+include ':app'
