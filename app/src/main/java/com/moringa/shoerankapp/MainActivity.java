@@ -1,6 +1,7 @@
 package com.moringa.shoerankapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setContentView(R.layout.activity_main);
             ButterKnife.bind(this);
             mRegister.setOnClickListener(this);
+
+
 
     }
     @Override
