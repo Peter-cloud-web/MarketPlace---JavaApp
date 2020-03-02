@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jordan">
+    tools:context=".login_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/loginLogo_logo"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/loginName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="151dp"
+        android:background="@drawable/inputs"
+        android:focusable="true"
+        android:hint="Enter Name"
+        android:padding="20dp"
+        android:textColorHighlight="#ff7eff15"
+        android:textColorHint="#ffff25e6" />
+
+    <EditText
+        android:id="@+id/loginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/inputs"
+        android:focusable="true"
+        android:hint="Enter password"
+        android:padding="20dp"
+        android:textColorHighlight="#ff7eff15"
+        android:textColorHint="#ffff25e6" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity=""
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/buttons"
+        android:padding="20dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+</RelativeLayout>
