@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/nike">
+    android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,6 +13,15 @@
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/loginImg2"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shoes" 
+        />
 
     <EditText
         android:id="@+id/registerAllName"
@@ -42,6 +50,7 @@
         android:layout_marginBottom="150dp"
         android:background="@drawable/inputs"
         android:focusable="true"
+        android:hint="Enter Email"
         android:padding="20dp"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="#ffff25e6" />
@@ -56,8 +65,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="57dp"
         android:background="@drawable/inputs"
+        android:hint="Enter Password"
         android:focusable="true"
-
         android:padding="20dp"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="#ffff25e6" />
@@ -71,6 +80,7 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/buttons"
         android:padding="20dp"
+        android:text="Register with us"
         android:layout_alignParentBottom="true"
         android:textColor="@android:color/white"
         android:layout_gravity=""

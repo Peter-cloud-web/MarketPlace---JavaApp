@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/jordan">
+    android:layout_height="match_parent">
     tools:context=".login_fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,6 +13,16 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/logo" />
 
+    <ImageView
+        android:id="@+id/loginImg2"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shoeb"
+        />
+
+
     <EditText
         android:id="@+id/loginName"
         android:layout_width="match_parent"
@@ -22,7 +31,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="140dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="151dp"
+        android:layout_marginBottom="179dp"
         android:background="@drawable/inputs"
         android:focusable="true"
         android:hint="Enter Name"
@@ -38,7 +47,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="140dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="83dp"
         android:background="@drawable/inputs"
         android:focusable="true"
         android:hint="Enter password"
@@ -54,7 +63,7 @@
         android:layout_gravity=""
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/buttons"
         android:padding="20dp"
         android:text="Login"

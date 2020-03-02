@@ -8,33 +8,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    @BindView(R.id.registerApp) Button mRegister;
+    @BindView(R.id.cart) Button mCart;
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             ButterKnife.bind(this);
-            mRegister.setOnClickListener(this);
-
-
+            mCart.setOnClickListener(this);
 
     }
+
     @Override
     public void onClick(View v) {
-       if ( v == mRegister){
-           openRegister();
+       if ( v == mCart){
+           openCart();
        }
     }
 
-    private void openRegister() {
-        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+    private void openCart() {
+        Intent intent = new Intent(MainActivity.this, CartActivity.class);
         startActivity(intent);
-
     }
+
+
 }
