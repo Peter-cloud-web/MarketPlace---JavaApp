@@ -7,4 +7,4 @@
     <item android:id="@+id/account" android:title="Account"/>
     <item android:id="@+id/contact" android:title="Contact"/>
     <item android:id="@+id/log" android:title="Log out"/>
-</menu>;
+</menu>
