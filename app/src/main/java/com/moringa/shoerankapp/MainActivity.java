@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void openCart() {
         Intent intent = new Intent(MainActivity.this, CartActivity.class);
         startActivity(intent);
+     Toast.makeText(MainActivity.this,"One ordered",Toast.LENGTH_LONG);
     }
 
 

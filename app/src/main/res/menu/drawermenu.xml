@@ -2,11 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
    <item android:id="@+id/db" android:title="dashboard"/>
     <item android:id="@+id/set" android:title="settings"/>
-    <item android:id="@+id/blog" android:title="blog"/>
-    <item android:id="@+id/brands" android:title="Famous Brands"/>
+    <item android:id="@+id/registerApp" android:title=" Register"/>
     <item android:id="@+id/activities" android:title="Activities"/>
     <item android:id="@+id/account" android:title="Account"/>
     <item android:id="@+id/contact" android:title="Contact"/>
     <item android:id="@+id/log" android:title="Log out"/>
-
-</menu>
+</menu>;
