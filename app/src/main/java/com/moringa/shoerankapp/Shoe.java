@@ -9,7 +9,6 @@ public class Shoe {
     private int thumbnail;
 
 
-
     public Shoe(String name, int price, String description, int thumbnail) {
         this.name = name;
         this.price = price;
@@ -34,5 +33,16 @@ public class Shoe {
 
     public int getThumbnail() {
         return thumbnail;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setThumbnail(int thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }
