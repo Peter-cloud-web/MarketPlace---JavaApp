@@ -52,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
             shoeName= (TextView) itemView.findViewById(R.id.shoeTitle);
             shoeImage = (ImageView) itemView.findViewById(R.id.shoeImage);
-            cardView = (CardView) itemView.findViewById(R.id.recycler);
+            cardView = (CardView) itemView.findViewById(R.id.card_view);
         }
     }
 }
