@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:onClick="onClick"
+    android:layout_width="120dp"
+    android:layout_height="190dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    cardview:cardCornerRadius="4dp">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+        <ImageView
+            android:id="@+id/shoeImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/shoeTitle"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Jordans"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
