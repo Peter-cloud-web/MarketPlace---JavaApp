@@ -25,7 +25,8 @@
             android:textSize="13sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Jordans"/>
+            android:text="Jordans"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
