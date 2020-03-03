@@ -1,6 +1,7 @@
 package com.moringa.shoerankapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.shoeName.setText(mShoe.get(position).getName());
         holder.shoeImage.setImageResource(mShoe.get(position).getThumbnail());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,shoeActivity.class);
+                intent.putExtra("Name",mShoe.get(position).getName());
+                intent.putExtra("Description",mShoe.get(position).getDescription());
+                intent.putExtra("Price",mShoe.get(position).getPrice());
+                intent.putExtra("Thumbnail",mShoe.get(position).getThumbnail());
+                mContext.startActivity(intent);
+
+            }
+        });
+
+
+
     }
 
     @Override
