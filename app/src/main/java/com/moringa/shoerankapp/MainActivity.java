@@ -14,20 +14,17 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity{
     List<Shoe> shoeList;
-//    @BindView(R.id.cart) Button mCart;
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             ButterKnife.bind(this);
-//            mCart.setOnClickListener(this);
+
 
             shoeList = new ArrayList<>();
         shoeList.add(new Shoe("Supra", 500,"Pretty affordable",R.drawable.s));
@@ -58,19 +55,5 @@ public class MainActivity extends AppCompatActivity{
 
 
     }
-
-//    @Override
-//    public void onClick(View v) {
-//       if ( v == mCart){
-//           openCart();
-//       }
-//    }
-//
-//    private void openCart() {
-//        Intent intent = new Intent(MainActivity.this, CartActivity.class);
-//        startActivity(intent);
-//     Toast.makeText(MainActivity.this,"One ordered",Toast.LENGTH_LONG);
-//    }
-
 
 }

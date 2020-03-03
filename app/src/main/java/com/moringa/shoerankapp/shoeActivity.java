@@ -2,19 +2,31 @@ package com.moringa.shoerankapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class shoeActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class shoeActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView name,description,price;
     private ImageView thumbnail;
+
+        @BindView(R.id.loginApp) Button mLogin;
+        @BindView(R.id.registerApp) Button mRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoe);
+        ButterKnife.bind(this);
+        mLogin.setOnClickListener(this);
+        mRegister.setOnClickListener(this);
 
         name = (TextView)findViewById(R.id.txt1);
         description = (TextView)findViewById(R.id.txt2);
@@ -29,5 +41,25 @@ public class shoeActivity extends AppCompatActivity {
         int image = intent.getExtras().getInt("Thumbnail");
 
         thumbnail.setImageResource(image);
+    }
+    @Override
+    public void onClick(View v) {
+        if ( v == mRegister){
+            openLogin();
+        }
+        if ( v == mLogin){
+            openRegister();
+        }
+    }
+
+    private void openLogin() {
+        Intent intent = new Intent(shoeActivity.this, LoginActivity.class);
+        startActivity(intent);
+        Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
+    }
+    private void openRegister() {
+        Intent intent = new Intent(shoeActivity.this,   RegisterActivity.class);
+        startActivity(intent);
+        Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
     }
 }
