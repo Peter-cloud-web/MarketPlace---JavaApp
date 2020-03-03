@@ -13,18 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
     private Context mContext;
-    private List<Shoe> shoeList;
+    private List<Shoe> mShoe;
 
-    public RecyclerAdapter(Context mContext, List<Shoe> shoeList) {
+    public RecyclerAdapter(Context mContext, List<Shoe> mShoe) {
         this.mContext = mContext;
-        this.shoeList = shoeList;
+        this.mShoe = mShoe;
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.shoes_items,parent,false);
@@ -32,15 +32,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-//        holder.shoeName.setText.get(mShoe).getName();
-//        holder.shoeImage.setImageResource(mShoe.get(position).getImage());
-//        holder.cardView.setOnClickListener(new View.OnClickListener());
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.shoeName.setText(mShoe.get(position).getName());
+        holder.shoeImage.setImageResource(mShoe.get(position).getThumbnail());
     }
 
     @Override
     public int getItemCount() {
-        return shoeList.size();
+        return mShoe.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

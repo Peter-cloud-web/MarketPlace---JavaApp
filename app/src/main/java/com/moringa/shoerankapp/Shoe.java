@@ -8,6 +8,8 @@ public class Shoe {
     private String description;
     private int thumbnail;
 
+
+
     public Shoe(String name, int price, String description, int thumbnail) {
         this.name = name;
         this.price = price;
@@ -17,6 +19,9 @@ public class Shoe {
 
     public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPrice() {
