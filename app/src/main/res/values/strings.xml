@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ShoeRankApp</string>
     <string name="swipe_right_for_login">Swipe Right for Login</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
 </resources>

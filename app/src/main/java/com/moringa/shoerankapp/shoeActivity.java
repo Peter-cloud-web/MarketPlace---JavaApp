@@ -25,13 +25,12 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoe);
         ButterKnife.bind(this);
-        mLogin.setOnClickListener(this);
         mRegister.setOnClickListener(this);
 
-        name = (TextView)findViewById(R.id.txt1);
-        description = (TextView)findViewById(R.id.txt2);
-        price = (TextView)findViewById(R.id.txt3);
-        thumbnail = (ImageView) findViewById(R.id.shoeImage);
+        name = findViewById(R.id.txt1);
+        description = findViewById(R.id.txt2);
+        price = findViewById(R.id.txt3);
+        thumbnail =findViewById(R.id.shoeImage);
 
         Intent intent = getIntent();
 
@@ -41,22 +40,23 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
         int image = intent.getExtras().getInt("Thumbnail");
 
         thumbnail.setImageResource(image);
+
     }
     @Override
     public void onClick(View v) {
         if ( v == mRegister){
             openLogin();
         }
-        if ( v == mLogin){
-            openRegister();
+            if ( v == mLogin){
+                openRegister();
+            }
         }
-    }
 
-    private void openLogin() {
-        Intent intent = new Intent(shoeActivity.this, LoginActivity.class);
-        startActivity(intent);
-        Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
-    }
+        private void openLogin() {
+            Intent intent = new Intent(shoeActivity.this, LoginActivity.class);
+            startActivity(intent);
+            Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
+        }
     private void openRegister() {
         Intent intent = new Intent(shoeActivity.this,   RegisterActivity.class);
         startActivity(intent);
