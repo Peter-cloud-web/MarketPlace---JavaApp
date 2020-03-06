@@ -1,4 +1,6 @@
-﻿# ShoeRank Application
+﻿# ShoeRank Application[![codebeat badge](https://codebeat.co/badges/27b1e45a-3692-4c6e-adc9-8a5bf26bdc4b)](https://codebeat.co/projects/github-com-peter-cloud-web-marketplace-javaapp-dev-branch)
+ 
+
 
 Developed by [Peter Gichia](https://github.com/Peter-cloud-web)
 
