@@ -39,11 +39,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v)
         if ( v == mRegister){
             openLogin();
         }
-
+    }
 
 
     private void openLogin() {
