@@ -56,7 +56,7 @@ public class CategoriesActivity extends AppCompatActivity {
                     mRecyclerView.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CategoriesActivity.this);
                     mRecyclerView.setLayoutManager(layoutManager);
-                    mRecyclerView.setHasFixedSize(true);
+                    mRecyclerView.setHasFixedSize(true)
 
                     showRestaurants();
                 } else {
