@@ -30,15 +30,6 @@ public class CategoriesActivity extends AppCompatActivity {
     private CategoriesRecyclerViewAdapter mAdapter;
 
     public List<Category> categories;
-//    @BindView(R.id.electronicCategory) ImageView mElectronicCategory;
-//    @BindView(R.id.phoneCategories) ImageView mPhoneCategories;
-//    @BindView(R.id.computersLaptops) ImageView mComputersLaptops;
-//    @BindView(R.id.clothesAll) ImageView mClothesAll;
-//    @BindView(R.id.foodBeverages) ImageView mFoodBeverages;
-//    @BindView(R.id.officeCategory) ImageView mOfficeCategories;
-//    @BindView(R.id.kidsToys) ImageView mKidsToys;
-//    @BindView(R.id.kitchenCooking) ImageView mKitchenCooking;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
