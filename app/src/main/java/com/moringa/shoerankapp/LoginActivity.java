@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView viewText;
     EditText mName;
     EditText mPassword;
-    SharedPreferences prefs;
 
 
     @Override
@@ -37,8 +36,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this); //
-        prefs.registerOnSharedPreferenceChangeListener((SharedPreferences.OnSharedPreferenceChangeListener) this);
 
         mLogin = findViewById(R.id.login);
         mRegister = findViewById(R.id.register);

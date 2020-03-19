@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if ( v == mRegister){
             openLogin();
         }
-    }
+
 
 
     private void openLogin() {
