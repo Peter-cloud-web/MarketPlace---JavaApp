@@ -13,8 +13,8 @@ public class EtsyClient {
         if (retrofit == null) {
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl(ETSY_BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create()
+//                    .baseUrl(ETSY_BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
 
