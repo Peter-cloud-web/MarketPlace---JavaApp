@@ -17,7 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<CategoriesRecyclerViewAdapter.CategoryItemsViewHolder>
+public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<CategoriesRecyclerViewAdapter.CategoryItemsViewHolder> {
     private List<Category> mCategories;
     private Context mContext;
 
@@ -34,7 +34,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
     }
 
     @Override
-    public void onBindViewHolder(CategoriesRecyclerViewAdapter.CategoryItemsViewHolder holder, int position) {
+    public void onBindViewHolder(CategoriesRecyclerViewAdapter.CategoryItemsViewHolder holder, int position)
         holder.bindProducts(mCategories.get(position));
     }
 
