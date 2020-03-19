@@ -1,7 +1,9 @@
 package com.moringa.shoerankapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -27,12 +29,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView viewText;
     EditText mName;
     EditText mPassword;
+    SharedPreferences prefs;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this); //
+        prefs.registerOnSharedPreferenceChangeListener((SharedPreferences.OnSharedPreferenceChangeListener) this);
 
         mLogin = findViewById(R.id.login);
         mRegister = findViewById(R.id.register);

@@ -119,7 +119,7 @@
         android:id="@+id/viewText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3000dp"
+        android:layout_below="@+id/login"
         android:text="TextView" />
 
 </RelativeLayout>

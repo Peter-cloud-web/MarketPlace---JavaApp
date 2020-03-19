@@ -58,7 +58,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
             mContext = itemView.getContext();
         }
 
-        public void bindProducts(Category category)
+        public void bindProducts(Category category){
             mCategoriesTitle.setText(category.getName());
             mCategoriesSecondTitle.setText(category.getId());
             Picasso.get().load(category.getUrl()).into(mCategoriesImageView);
