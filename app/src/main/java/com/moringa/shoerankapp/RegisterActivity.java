@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v)
+    public void onClick(View v) {
         if ( v == mRegister){
             openLogin();
         }
@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                       } else{
                           Toast.makeText(RegisterActivity.this,"Please try again later",Toast.LENGTH_LONG).show();
                       }
-                    }
+
                 });
 
     }
