@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                       } else{
                           Toast.makeText(RegisterActivity.this,"Please try again later",Toast.LENGTH_LONG).show();
                       }
-
+                    }
                 });
 
     }
