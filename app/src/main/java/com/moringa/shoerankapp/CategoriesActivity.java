@@ -32,7 +32,7 @@ public class CategoriesActivity extends AppCompatActivity {
     public List<Category> categories;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
         ButterKnife.bind(this);
