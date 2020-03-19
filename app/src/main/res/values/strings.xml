@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ShoeRankApp</string>
+    <string name="swipe_right_for_login">Swipe Right for Login</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password1">Enter Password</string>
+    <string name="register_with_us">Register with us</string>
+    <string name="title_1">Title 1</string>
+</resources>

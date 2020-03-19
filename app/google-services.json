@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "946018858998",
+    "firebase_url": "https://shoerank-985b6.firebaseio.com",
+    "project_id": "shoerank-985b6",
+    "storage_bucket": "shoerank-985b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946018858998:android:574b5c85dfea4e56bcb9d7",
+        "android_client_info": {
+          "package_name": "com.moringa.shoerankapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946018858998-p60vtkk8t1dgh5uemjcod8k419b53fb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringa.shoerankapp",
+            "certificate_hash": "33aeaeccac5e6f69a1d25f5b1660ddd8656e2e44"
+          }
+        },
+        {
+          "client_id": "946018858998-e2baocguoa8h87ta9oiju28dsk3vnnt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrwhUbwN7JMLV1bSDsDmxEgX5pjX6H-Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946018858998-e2baocguoa8h87ta9oiju28dsk3vnnt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
