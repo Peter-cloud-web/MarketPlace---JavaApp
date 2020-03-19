@@ -73,7 +73,7 @@ public class CategoriesActivity extends AppCompatActivity {
         });
     }
 
-    private void showFailureMessage()
+    private void showFailureMessage() {
         mErrorTextView.setText("Something went wrong. Please check your Internet connection and try again later");
         mErrorTextView.setVisibility(View.VISIBLE);
     }
