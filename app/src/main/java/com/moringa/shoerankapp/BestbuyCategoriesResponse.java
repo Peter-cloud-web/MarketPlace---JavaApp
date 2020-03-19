@@ -12,7 +12,7 @@ import java.util.List;
 public class BestbuyCategoriesResponse implements Serializable, Parcelable
 {
 
-    @SerializedName("categories"
+    @SerializedName("categories")
     @Expose
     private List<Category> categories = null;
     public final static Parcelable.Creator<BestbuyCategoriesResponse> CREATOR = new Creator<BestbuyCategoriesResponse>() {
