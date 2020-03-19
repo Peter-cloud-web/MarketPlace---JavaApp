@@ -27,7 +27,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
     }
 
     @Override
-    public CategoriesRecyclerViewAdapter.CategoryItemsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CategoriesRecyclerViewAdapter.CategoryItemsViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.categories, parent, false);
         CategoryItemsViewHolder viewHolder = new CategoryItemsViewHolder(view);
         return viewHolder;
@@ -52,7 +52,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
 
         private Context mContext;
 
-        public CategoryItemsViewHolder(View itemView)
+        public CategoryItemsViewHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
