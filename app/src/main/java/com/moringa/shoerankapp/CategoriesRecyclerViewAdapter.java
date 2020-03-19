@@ -34,7 +34,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
     }
 
     @Override
-    public void onBindViewHolder(CategoriesRecyclerViewAdapter.CategoryItemsViewHolder holder, int position)
+    public void onBindViewHolder(CategoriesRecyclerViewAdapter.CategoryItemsViewHolder holder, int position) {
         holder.bindProducts(mCategories.get(position));
     }
 
@@ -52,7 +52,7 @@ public class CategoriesRecyclerViewAdapter extends RecyclerView.Adapter<Categori
 
         private Context mContext;
 
-        public CategoryItemsViewHolder(View itemView){
+        public CategoryItemsViewHolder(View itemView)
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
