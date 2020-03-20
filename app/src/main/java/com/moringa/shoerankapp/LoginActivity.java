@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     Toast.LENGTH_SHORT).show();
 
                         }else{
-                            Toast.makeText(LoginActivity.this, "Login was successful", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(LoginActivity.this, "Login was successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
                         }
@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void openRegister() {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-        Toast.makeText(LoginActivity.this,"Welcome to the registry panel " ,Toast.LENGTH_LONG).show();
+        Toast.makeText(LoginActivity.this,"Welcome to the registry panel " ,Toast.LENGTH_LONG).show()
         startActivity(intent);
     }
 }
