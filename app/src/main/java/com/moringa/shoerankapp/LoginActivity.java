@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = mEmail.getText().toString().trim();
         String password = mPassword.getText().toString().trim();
 
-        if (email.equals("") {
+        if (email.equals("")) {
             mEmail.setError("Please enter your email");
             return;
         }
