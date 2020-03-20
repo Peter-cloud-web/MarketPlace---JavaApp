@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void openRegister() {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-        Toast.makeText(LoginActivity.this,"Welcome to the registry panel " ,Toast.LENGTH_LONG).show()
+        Toast.makeText(LoginActivity.this,"Welcome to the registry panel " ,Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
 }
