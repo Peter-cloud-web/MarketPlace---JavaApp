@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Log.w("Ch3", "Failed to read value.", error.toException());
             }
         });
-
+    }
 
 
     @Override
@@ -99,11 +99,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void openLogin() {
 
-        String email = mEmail.getText().toString().trim()
+        String email = mEmail.getText().toString().trim();
+        String password = mPassword.getText().toString().trim();
 
-        String password = mPassword.getText().toString().trim()
-
-        if (email.equals("")) {
+        if (email.equals("") {
             mEmail.setError("Please enter your email");
             return;
         }
