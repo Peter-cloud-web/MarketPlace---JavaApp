@@ -12,8 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,12 +29,17 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static final String TAG = LoginActivity.class.getSimpleName();
+
     Button mLogin;
     Button mRegister;
     Button mWrite;
     TextView viewText;
-    EditText mName;
+    EditText mEmail;
     EditText mPassword;
+
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -41,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mRegister = findViewById(R.id.register);
 
 
-        mName = findViewById(R.id.loginName);
+        mEmail = findViewById(R.id.loginEmail);
         mPassword = findViewById(R.id.loginPassword);
 
         mLogin.setOnClickListener(this);
@@ -50,6 +61,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
         mWrite = findViewById(R.id.writeToUs);
+
+        mAuth = FirebaseAuth.getInstance();
+
+
         mWrite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,12 +98,40 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void openLogin() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        String name  = mName.getText().toString();
-        intent.putExtra("name",name);
-        Toast.makeText(LoginActivity.this,"You are logged in as " +name ,Toast.LENGTH_LONG).show();
-        startActivity(intent);
+
+        String email = mEmail.getText().toString().trim();
+        String password = mPassword.getText().toString().trim();
+
+        if (email.equals("")) {
+            mEmail.setError("Please enter your email");
+            return;
+        }
+        if (password.equals("")) {
+            mPassword.setError("Password cannot be blank");
+            return;
+        }
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "signInWithEmail", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+
+                        }else{
+                            Toast.makeText(LoginActivity.this, "Login was successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                        }
+                    }
+                });
+
     }
+
     private void openRegister() {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         Toast.makeText(LoginActivity.this,"Welcome to the registry panel " ,Toast.LENGTH_LONG).show();
