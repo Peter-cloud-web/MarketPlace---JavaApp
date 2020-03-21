@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Path implements Serializable, Parcelable
+public class SubCategory implements Serializable, Parcelable
 {
 
     @SerializedName("id")
@@ -17,24 +17,25 @@ public class Path implements Serializable, Parcelable
     @SerializedName("name")
     @Expose
     private String name;
-    public final static Parcelable.Creator<Path> CREATOR = new Creator<Path>() {
+    public final static Parcelable.Creator<SubCategory> CREATOR = new Creator<SubCategory>() {
 
 
         @SuppressWarnings({
                 "unchecked"
         })
-        public Path createFromParcel(Parcel in) {
-            return new Path(in);
+        public SubCategory createFromParcel(Parcel in) {
+            return new SubCategory(in);
         }
 
-        public Path[] newArray(int size) {
-            return (new Path[size]);
+        public SubCategory[] newArray(int size) {
+            return (new SubCategory[size]);
         }
 
-    };
-    private final static long serialVersionUID = -2062266568919715734L;
+    }
+            ;
+    private final static long serialVersionUID = 5940752079258718854L;
 
-    protected Path(Parcel in) {
+    protected SubCategory(Parcel in) {
         this.id = ((String) in.readValue((String.class.getClassLoader())));
         this.name = ((String) in.readValue((String.class.getClassLoader())));
     }
@@ -43,7 +44,7 @@ public class Path implements Serializable, Parcelable
      * No args constructor for use in serialization
      *
      */
-    public Path() {
+    public SubCategory() {
     }
 
     /**
@@ -51,7 +52,7 @@ public class Path implements Serializable, Parcelable
      * @param name
      * @param id
      */
-    public Path(String id, String name) {
+    public SubCategory(String id, String name) {
         super();
         this.id = id;
         this.name = name;
@@ -83,4 +84,3 @@ public class Path implements Serializable, Parcelable
     }
 
 }
-

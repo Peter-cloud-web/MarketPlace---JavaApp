@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Models;
 
 import android.media.Image;
 

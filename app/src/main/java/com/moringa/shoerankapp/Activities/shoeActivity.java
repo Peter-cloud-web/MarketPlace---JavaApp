@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.moringa.shoerankapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

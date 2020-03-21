@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moringa.shoerankapp.Activities.shoeActivity;
+import com.moringa.shoerankapp.Models.Shoe;
+import com.moringa.shoerankapp.R;
 
 import java.util.List;
 
@@ -39,7 +43,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,shoeActivity.class);
+                Intent intent = new Intent(mContext, shoeActivity.class);
                 intent.putExtra("Name",mShoe.get(position).getName());
                 intent.putExtra("Description",mShoe.get(position).getDescription());
                 intent.putExtra("Price",mShoe.get(position).getPrice());

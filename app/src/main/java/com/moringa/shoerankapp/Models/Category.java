@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -53,8 +53,8 @@ public class Category implements Serializable, Parcelable
         this.name = ((String) in.readValue((String.class.getClassLoader())));
         this.active = ((Boolean) in.readValue((Boolean.class.getClassLoader())));
         this.url = ((String) in.readValue((String.class.getClassLoader())));
-        in.readList(this.path, (com.moringa.shoerankapp.Path.class.getClassLoader()));
-        in.readList(this.subCategories, (com.moringa.shoerankapp.SubCategory.class.getClassLoader()));
+        in.readList(this.path, (Path.class.getClassLoader()));
+        in.readList(this.subCategories, (SubCategory.class.getClassLoader()));
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Adapters;
 
 
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moringa.shoerankapp.Models.Category;
+import com.moringa.shoerankapp.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

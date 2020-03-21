@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moringa.shoerankapp.Network.BestbuyApi;
+import com.moringa.shoerankapp.Network.BestbuyClient;
+import com.moringa.shoerankapp.Adapters.CategoriesRecyclerViewAdapter;
+import com.moringa.shoerankapp.Models.BestbuyCategoriesResponse;
+import com.moringa.shoerankapp.Models.Category;
+import com.moringa.shoerankapp.R;
 
 import java.util.List;
 
@@ -41,7 +48,7 @@ public class CategoriesActivity extends AppCompatActivity {
         String userName = intent.getStringExtra("userName");
         mWelcomeMessage.setText("Welcome back " + userName);
 
-        EtsyApi client = EtsyClient.getClient();
+        BestbuyApi client = BestbuyClient.getClient();
 
         Call<BestbuyCategoriesResponse> call = client.getCategories();
 

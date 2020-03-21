@@ -1,9 +1,12 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Network;
+
+import com.moringa.shoerankapp.Models.BestBuyProductSearchResponse;
+import com.moringa.shoerankapp.Models.BestbuyCategoriesResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface EtsyApi {
+public interface BestbuyApi {
 
     //products get request
     @GET("products?apiKey=BxaYUpnn8AUTWp69vYwpDi1V&format=json")

@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.moringa.shoerankapp.Models.Shoe;
 import com.moringa.shoerankapp.R;
-import com.moringa.shoerankapp.RecyclerAdapter;
-import com.moringa.shoerankapp.Shoe;
+import com.moringa.shoerankapp.Adapters.RecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

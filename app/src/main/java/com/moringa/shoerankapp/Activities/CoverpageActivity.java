@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.moringa.shoerankapp.R;
 
 public class CoverpageActivity extends AppCompatActivity implements View.OnClickListener {
     Button mCoverPage;
@@ -31,7 +33,7 @@ public class CoverpageActivity extends AppCompatActivity implements View.OnClick
 
         }
     private void openLogin() {
-        Intent intent = new Intent (CoverpageActivity.this,LoginActivity.class);
+        Intent intent = new Intent (CoverpageActivity.this, LoginActivity.class);
         Toast.makeText(CoverpageActivity.this,"Welcome to shoeRank",Toast.LENGTH_LONG).show();
         startActivity(intent);
     }

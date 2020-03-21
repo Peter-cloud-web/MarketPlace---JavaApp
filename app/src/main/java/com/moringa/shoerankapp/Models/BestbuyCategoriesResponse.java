@@ -1,4 +1,4 @@
-package com.moringa.shoerankapp;
+package com.moringa.shoerankapp.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
