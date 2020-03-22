@@ -34,7 +34,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
         if (user != null) {
             // Name, email address, and profile photo Url
             userName.setText(user.getDisplayName());
-            userEmail.setText(user.getEmail());
+            userEmail.setText(user.getEmail())
 
 
             // Check if user's email is verified
