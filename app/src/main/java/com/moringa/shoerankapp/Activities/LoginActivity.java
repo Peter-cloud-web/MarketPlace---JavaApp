@@ -29,9 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public static final String TAG = LoginActivity.class.getSimpleName();
 
     Button mLogin;
-    Button mRegister;
-    Button mWrite;
-    TextView viewText;
+    TextView mRegister;
     EditText mEmail;
     EditText mPassword;
 
@@ -56,31 +54,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mRegister.setOnClickListener(this);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-        mWrite = findViewById(R.id.writeToUs);
-
         mAuth = FirebaseAuth.getInstance();
 
 
-        mWrite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myRef.setValue("Hello, I would like to make a purchase of 2 jordans.");
-            }
-        });
-        viewText = findViewById(R.id.viewText);
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                viewText.setText(value);
-            }
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("Ch3", "Failed to read value.", error.toException());
-            }
-        });
     }
 
 

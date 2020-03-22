@@ -28,7 +28,7 @@
         android:textColor="#000"
         android:textSize="50sp"
         android:textStyle="bold" />
-<TextView
+   <TextView
     android:id="@+id/name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -88,40 +88,15 @@
         android:textColor="@android:color/white"
         android:textSize="8sp" />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="130dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/buttons"
-        android:text="Register"
-        android:textColor="@android:color/white"
-        android:textSize="8sp" />
-
-    <Button
-        android:id="@+id/writeToUs"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="130dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/buttons"
-        android:gravity="center"
-        android:text="Write To Us"
-        android:textColor="@android:color/white"
-        android:textSize="8sp" />
-
     <TextView
-        android:id="@+id/viewText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Register and create an account"
         android:layout_below="@+id/login"
-        android:text="TextView" />
-
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:id="@+id/register"
+        android:textColor="#00B9FF"/>
 </RelativeLayout>
