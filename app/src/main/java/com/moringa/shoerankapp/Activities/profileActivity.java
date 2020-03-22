@@ -25,7 +25,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
     @BindView(R.id.logout) Button logout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
