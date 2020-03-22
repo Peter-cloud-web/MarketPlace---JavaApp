@@ -25,7 +25,7 @@ public class Product {
      * No args constructor for use in serialization
      *
      */
-    public Product() ""
+    public Product() {
     }
 
     /**
