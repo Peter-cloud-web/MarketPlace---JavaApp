@@ -38,7 +38,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
 
 
             // Check if user's email is verified
-            boolean emailVerified = user.isEmailVerified()
+            boolean emailVerified = user.isEmailVerified();
 
             // The user's ID, unique to the Firebase project. Do NOT use this value to
             // authenticate with your backend server, if you have one. Use
@@ -46,7 +46,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
             String uid = user.getUid();
         }
 
-        logout.setOnClickListener(this)
+        logout.setOnClickListener(this);
 
     }
 
