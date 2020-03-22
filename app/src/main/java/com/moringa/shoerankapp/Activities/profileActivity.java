@@ -46,7 +46,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
             String uid = user.getUid();
         }
 
-        logout.setOnClickListener(this);
+        logout.setOnClickListener(this)
 
     }
 
