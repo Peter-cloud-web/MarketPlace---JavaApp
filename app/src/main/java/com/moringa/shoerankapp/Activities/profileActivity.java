@@ -79,7 +79,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
     }
     private void delete(){
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        final FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -89,7 +89,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
                     finish();
                 } else {
                     Toast.makeText(profileActivity.this,"Connection error.PLease try again later",Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
     }
