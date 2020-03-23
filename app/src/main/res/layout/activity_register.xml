@@ -13,11 +13,10 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:drawableLeft="@drawable/person"
-        android:layout_above="@+id/login"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="200dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="179dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/profilepicture"
         android:background="#F4F1F1"
         android:focusable="true"
         android:hint="Enter_name"
@@ -34,10 +33,10 @@
         android:drawableLeft="@drawable/email"
         android:inputType="textEmailAddress"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="280dp"
+        android:layout_below="@+id/registerName"
         android:layout_marginRight="15dp"
         android:textStyle="bold"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="30dp"
         android:background="#F4F1F1"
         android:textColorHint="#000"/>
 
@@ -49,7 +48,7 @@
         android:drawableLeft="@drawable/lock"
         android:inputType="textPassword"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="360dp"
+        android:layout_below="@+id/RegisterEmail"
         android:layout_marginRight="15dp"
         android:textStyle="bold"
         android:layout_marginBottom="83dp"
@@ -77,24 +76,43 @@
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 
+
     <ImageView
-        android:id="@+id/textSpacerNoTitle"
+        android:id="@+id/profilepicture"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="120dp"
-        android:src="@drawable/iconshoe2"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/logo"
+        android:layout_marginBottom="100dp"
         />
 
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"
+        android:text="Choose Image"
+        android:layout_above="@+id/registerName"/>
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:text="Upload Image"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/registerName"
+        android:layout_marginLeft="190dp"
+        android:layout_marginBottom="20dp"/>
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
-
-        android:layout_below="@id/textSpacerNoTitle"
         android:fontFamily="@font/indigo_daisy"
         android:text="The ShoeRank"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:textColor="#000"
         android:textSize="50sp"
         android:textStyle="bold" />

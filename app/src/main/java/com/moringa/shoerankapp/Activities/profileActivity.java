@@ -84,7 +84,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(profileActivity.this, RegisterActivity.class));
+                    startActivity(new Intent(profileActivity.this, CoverpageActivity.class));
                     Toast.makeText(profileActivity.this,"Account deleted successfully",Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
@@ -93,4 +93,4 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
-
+}
