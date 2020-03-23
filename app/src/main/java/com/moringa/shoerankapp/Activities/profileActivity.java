@@ -2,6 +2,7 @@ package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,6 +24,8 @@ import butterknife.ButterKnife;
 public class profileActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.userEmail) TextView userEmail;
     @BindView(R.id.logout) Button logout;
+    @BindView(R.id.delete) Button delete;
+    private static final String TAG = "profileActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         logout.setOnClickListener(this);
+        delete.setOnClickListener(this);
 
     }
 
@@ -53,6 +57,9 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
        if (v == logout){
            signOut();
+       }
+       if(v == delete){
+           delete();
        }
     }
     private void signOut(){
@@ -69,5 +76,21 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
                         }
                     }
                 });
+    }
+    private void delete(){
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        final FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        currentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    startActivity(new Intent(profileActivity.this, RegisterActivity.class));
+                    Toast.makeText(profileActivity.this,"Account deleted successfully",Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Toast.makeText(profileActivity.this,"Connection error.PLease try again later",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
