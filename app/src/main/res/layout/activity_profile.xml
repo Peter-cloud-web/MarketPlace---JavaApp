@@ -16,17 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="10dp"
-        android:text="  Logged in as :"
+        android:text="Email logging details :"
         android:textStyle="bold"
         android:id="@+id/log"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="10dp"
-        android:text="Name"
-        android:id="@+id/userName"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +30,7 @@
         android:id="@+id/userEmail"/>
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/logout"
         android:layout_width="150dp"
         android:layout_height="20dp"
         android:layout_marginLeft="120dp"

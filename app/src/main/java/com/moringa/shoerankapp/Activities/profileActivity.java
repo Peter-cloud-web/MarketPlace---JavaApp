@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,8 +20,7 @@ import com.moringa.shoerankapp.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class profileActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.userName) TextView userName;
+public class profileActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.userEmail) TextView userEmail;
     @BindView(R.id.logout) Button logout;
 
@@ -33,7 +33,6 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // Name, email address, and profile photo Url
-            userName.setText(user.getDisplayName());
             userEmail.setText(user.getEmail());
 
 
@@ -62,6 +61,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
+                            Toast.makeText(profileActivity.this,"successfully logged out",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                             finish();
                         } else {
