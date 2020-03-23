@@ -88,8 +88,8 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(profileActivity.this,"Account deleted successfully",Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(profileActivity.this,"Connection error.PLease try again later",Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(profileActivity.this, "Connection error.PLease try again later", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
