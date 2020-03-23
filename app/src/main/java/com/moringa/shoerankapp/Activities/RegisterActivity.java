@@ -75,10 +75,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if( v == mRegister){
             openLogin();
         }
-        if( v == choose){
+        if( v == choose)
             openGallery();
         }
-        if( v == upload){
+        if( v == upload)
             uploadImage();
         }
     }
