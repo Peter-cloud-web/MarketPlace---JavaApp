@@ -75,10 +75,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if( v == mRegister){
             openLogin();
         }
-        if( v == choose)
+        if( v == choose){
             openGallery();
         }
-        if( v == upload)
+        if( v == upload){
             uploadImage();
         }
     }
@@ -105,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void openGallery(){
-        Intent intent = new Intent();
+        Intent intent = new Intent()
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent,"select picture"),PICK_IMAGE_REQUEST);
