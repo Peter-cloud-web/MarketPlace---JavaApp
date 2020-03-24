@@ -4,56 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3">
 
-    <ImageView
-        android:id="@+id/loginImg2"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="55dp"
-        android:scaleType="centerCrop"
-        android:layout_marginLeft="40dp"
-        android:src="@drawable/iconcolor"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_below="@id/loginImg2"
-        android:fontFamily="@font/indigo_daisy"
-        android:text="Welcome to"
-        android:layout_marginBottom="50dp"
-        android:textColor="#8000FF"
-        android:textSize="35sp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
-        android:layout_below="@id/loginImg2"
-        android:fontFamily="@font/indigo_daisy"
+        android:fontFamily="@font/spacequest"
         android:text="The ShoeRank"
         android:layout_marginTop="50dp"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="50sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_below="@id/loginImg2"
-        android:fontFamily="@font/indigo_daisy"
-        android:text="Your one stop shop for all types of cool footwears"
-        android:layout_marginTop="150dp"
-        android:textColor="#8000FF"
-        android:textSize="20sp"
-        android:textStyle="italic" />
 
 
     <Button
@@ -61,8 +27,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/textView3"
+        android:layout_marginTop="650dp"
         android:background="@drawable/buttons"
         android:text="Get Started"
         android:textStyle="bold"
