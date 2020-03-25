@@ -8,17 +8,18 @@ public class Shoe {
     private String description;
     private int thumbnail;
 
-
     public Shoe(String name, int price, String description, int thumbnail) {
         this.name = name;
         this.price = price;
         this.description = description;
-       this.thumbnail = thumbnail;
+        this.thumbnail = thumbnail;
     }
+
 
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -27,22 +28,27 @@ public class Shoe {
         return price;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public int getThumbnail() {
-        return thumbnail;
-    }
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
+    public int getThumbnail() {
+        return thumbnail;
+    }
+
     public void setThumbnail(int thumbnail) {
         this.thumbnail = thumbnail;
     }
+
+
+
+
 }

@@ -12,17 +12,21 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringa.shoerankapp.Activities.shoeActivity;
 import com.moringa.shoerankapp.Models.Shoe;
 import com.moringa.shoerankapp.R;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
+public class FirebaseShoeRecyclerAdapter extends RecyclerView.Adapter<FirebaseShoeRecyclerAdapter.MyViewHolder>{
     private Context mContext;
     private List<Shoe> mShoe;
 
-    public RecyclerAdapter(Context mContext, List<Shoe> mShoe) {
+    public FirebaseShoeRecyclerAdapter(Context mContext, List<Shoe> mShoe) {
         this.mContext = mContext;
         this.mShoe = mShoe;
     }
@@ -41,12 +45,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.shoeName.setText(mShoe.get(position).getName());
         holder.shoeImage.setImageResource(mShoe.get(position).getThumbnail());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("posts").push();
+
+                Map<String, Object> map = new HashMap<>();
+
+                map.put("name", databaseReference.getKey());
+                map.put("description",databaseReference.getKey());
+                map.put("price",databaseReference.getKey());
+                map.put("Thumbnail",databaseReference.getKey());
+
+                databaseReference.setValue(map);
+
                 Intent intent = new Intent(mContext, shoeActivity.class);
-                intent.putExtra("Name",mShoe.get(position).getName());
-                intent.putExtra("Description",mShoe.get(position).getDescription());
-                intent.putExtra("Price",mShoe.get(position).getPrice());
+                intent.putExtra("name",mShoe.get(position).getName());
+                intent.putExtra("description",mShoe.get(position).getDescription());
+                intent.putExtra("price",mShoe.get(position).getPrice());
                 intent.putExtra("Thumbnail",mShoe.get(position).getThumbnail());
                 mContext.startActivity(intent);
 
@@ -70,9 +86,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         public MyViewHolder(View itemView){
             super(itemView);
 
-            shoeName= (TextView) itemView.findViewById(R.id.shoeTitle);
-            shoeImage = (ImageView) itemView.findViewById(R.id.shoeImage);
-            cardView = (CardView) itemView.findViewById(R.id.card_view);
+            shoeName= itemView.findViewById(R.id.shoeTitle);
+            shoeImage =  itemView.findViewById(R.id.shoeImage);
+            cardView = itemView.findViewById(R.id.card_view);
         }
     }
 }

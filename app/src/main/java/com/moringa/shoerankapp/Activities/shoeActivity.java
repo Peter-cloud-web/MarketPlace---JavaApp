@@ -16,7 +16,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class shoeActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView name,description,price;
+    private TextView description,price;
+    private TextView name;
     private ImageView thumbnail;
 
         @BindView(R.id.loginApp) Button mLogin;
@@ -27,6 +28,7 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shoe);
         ButterKnife.bind(this);
+
         mRegister.setOnClickListener(this);
 
         name = findViewById(R.id.txt1);
@@ -36,9 +38,9 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = getIntent();
 
-        String name = intent.getExtras().getString("Name");
-        String description = intent.getExtras().getString("Description");
-        String price = intent.getExtras().getString("Price");
+        String name = intent.getExtras().getString("name");
+        String description = intent.getExtras().getString("description");
+        int price = intent.getExtras().getInt("price");
         int image = intent.getExtras().getInt("Thumbnail");
 
         thumbnail.setImageResource(image);

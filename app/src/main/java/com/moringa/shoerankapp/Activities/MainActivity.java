@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import com.moringa.shoerankapp.Models.Shoe;
 import com.moringa.shoerankapp.R;
-import com.moringa.shoerankapp.Adapters.RecyclerAdapter;
+import com.moringa.shoerankapp.Adapters.FirebaseShoeRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity{
         shoeList.add(new Shoe("British Knights", 500,"Pretty affordable",R.drawable.s9));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(this,shoeList);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        FirebaseShoeRecyclerAdapter recyclerAdapter = new FirebaseShoeRecyclerAdapter(this,shoeList);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(recyclerAdapter);
 
 

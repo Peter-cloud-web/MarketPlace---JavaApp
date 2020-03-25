@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @BindView(R.id.profilepicture) ImageView profilePic;
 
     private Uri filePath;
-    private final int PICK_IMAGE_REQUEST = 1;
+    private final int PICK_IMAGE_REQUEST = 123;
     private FirebaseAuth mAuth;
 
     FirebaseStorage storage;
@@ -114,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onActivityResult(int requestCode,int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
-        if(resultCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
+        if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null){
           filePath = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
@@ -125,6 +125,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 e.printStackTrace();
             }
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void uploadImage() {
