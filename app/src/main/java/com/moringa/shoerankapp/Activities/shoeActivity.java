@@ -15,13 +15,11 @@ import com.moringa.shoerankapp.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class shoeActivity extends AppCompatActivity implements View.OnClickListener {
+public class shoeActivity extends AppCompatActivity  {
     private TextView description,price;
     private TextView name;
     private ImageView thumbnail;
 
-        @BindView(R.id.loginApp) Button mLogin;
-        @BindView(R.id.registerApp) Button mRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +27,6 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_shoe);
         ButterKnife.bind(this);
 
-        mRegister.setOnClickListener(this);
 
         name = findViewById(R.id.txt1);
         description = findViewById(R.id.txt2);
@@ -45,25 +42,5 @@ public class shoeActivity extends AppCompatActivity implements View.OnClickListe
 
         thumbnail.setImageResource(image);
 
-    }
-    @Override
-    public void onClick(View v) {
-        if ( v == mRegister){
-            openLogin();
-        }
-            if ( v == mLogin){
-                openRegister();
-            }
-        }
-
-        private void openLogin() {
-            Intent intent = new Intent(shoeActivity.this, LoginActivity.class);
-            startActivity(intent);
-            Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
-        }
-    private void openRegister() {
-        Intent intent = new Intent(shoeActivity.this,   RegisterActivity.class);
-        startActivity(intent);
-        Toast.makeText(shoeActivity.this,"One ordered",Toast.LENGTH_LONG);
     }
 }

@@ -49,39 +49,6 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/registerApp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity=""
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/buttons"
-                android:padding="20dp"
-                android:text="Register"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="13dp" />
-
-            <Button
-                android:id="@+id/loginApp"
-                android:layout_width="359dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity=""
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="154dp"
-                android:layout_marginBottom="165dp"
-                android:background="@drawable/buttons"
-                android:padding="13dp"
-                android:text="Already have an account? login"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="18dp" />
-
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
