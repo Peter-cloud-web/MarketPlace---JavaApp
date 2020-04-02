@@ -36,7 +36,7 @@ public class SplashScreen extends AppCompatActivity {
 
         rLayout = findViewById(R.id.delay);
 
-        handler.postDelayed(runnable,3000);
+        handler.postDelayed(runnable,3000;
 
 //        mCoverPage //        mCoverPage = findViewById(R.id.coverpage);
 //
