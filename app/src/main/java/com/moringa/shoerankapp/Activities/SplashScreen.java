@@ -16,7 +16,7 @@ import com.moringa.shoerankapp.R;
 
 public class SplashScreen extends AppCompatActivity {
 
-    RelativeLayout rLayout;
+    RelativeLayout
 
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
