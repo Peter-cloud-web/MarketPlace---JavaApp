@@ -2,7 +2,6 @@ package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -84,7 +83,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(profileActivity.this, CoverpageActivity.class));
+                    startActivity(new Intent(profileActivity.this, SplashScreen.class));
                     Toast.makeText(profileActivity.this,"Account deleted successfully",Toast.LENGTH_SHORT).show();
                     finish();
                 } else {

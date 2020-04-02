@@ -39,7 +39,7 @@
         <activity android:name=".Activities.LoginActivity">
 
         </activity>
-        <activity android:name=".Activities.CoverpageActivity">
+        <activity android:name=".Activities.SplashScreen">
             <meta-data
                 android:name="firebase_crashlytics_collection_enabled"
                 android:value="false" />

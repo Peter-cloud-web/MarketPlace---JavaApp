@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:id="@+id/delay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg3">
@@ -22,20 +24,21 @@
         android:textStyle="bold" />
 
 
-    <Button
-        android:id="@+id/coverpage"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="550dp"
-        android:background="@drawable/buttons"
-        android:text="Get Started"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:textSize="13sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="658dp" />
+<!--    <Button-->
+<!--        android:id="@+id/coverpage"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:onClick="tapToFade"-->
+<!--        android:layout_marginLeft="70dp"-->
+<!--        android:layout_marginTop="550dp"-->
+<!--        android:background="@drawable/buttons"-->
+<!--        android:text="Get Started"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="13sp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="105dp"-->
+<!--        tools:layout_editor_absoluteY="658dp" />-->
 
 
 

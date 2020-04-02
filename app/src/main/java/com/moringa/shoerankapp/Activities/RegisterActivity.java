@@ -41,8 +41,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @BindView(R.id.RegisterEmail) EditText mEmail;
     @BindView(R.id.RegisterPassword) EditText mPassword;
 
-
-
     @BindView(R.id.btnChoose) Button choose;
     @BindView(R.id.btnUpload) Button upload;
     @BindView(R.id.profilepicture) ImageView profilePic;
@@ -79,7 +77,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             openGallery();
         }
         if( v == upload){
-            uploadImage();
+            try {
+                uploadImage();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
     private void openLogin() {
@@ -105,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void openGallery(){
-        Intent intent = new Intent()
+        Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent,"select picture"),PICK_IMAGE_REQUEST);
@@ -128,13 +130,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void uploadImage() {
+    private void uploadImage() throws InterruptedException {
 
         if(filePath != null)
         {
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
+            Thread.sleep(1000);
 
             StorageReference ref = storageReference.child("images/"+ UUID.randomUUID().toString());
             ref.putFile(filePath)
@@ -157,7 +160,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                             double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
                                     .getTotalByteCount());
-                            progressDialog.setMessage("Uploaded "+(int)progress+"%");
+                            progressDialog.setMessage("Uploaded "+ (int) progress + "%");
                         }
                     });
         }
