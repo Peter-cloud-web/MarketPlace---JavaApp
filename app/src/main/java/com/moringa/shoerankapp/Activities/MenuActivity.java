@@ -49,7 +49,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         });
         shop.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View v, MotionEvent event {
                 Toast.makeText(MenuActivity.this,"click to start shopping",Toast.LENGTH_SHORT).show();
                 return false;
             }
