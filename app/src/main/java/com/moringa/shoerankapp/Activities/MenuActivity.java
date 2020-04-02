@@ -2,6 +2,7 @@ package com.moringa.shoerankapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -32,6 +33,28 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_menu);
         ButterKnife.bind(this);
 
+        profile.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Toast.makeText(MenuActivity.this,"click to view profile",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        logout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Toast.makeText(MenuActivity.this,"click to logout",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        shop.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Toast.makeText(MenuActivity.this,"click to start shopping",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
 
         logout.setOnClickListener(this);
         profile.setOnClickListener(this);
@@ -40,13 +63,13 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         purchases.setOnClickListener(this);
         shop.setOnClickListener(this);
 
-   }
+    }
 
-   @Override
-   public void onClick(View v){
+    @Override
+    public void onClick(View v){
         if(v == profile ){
-           openProfile();
-       }
+            openProfile();
+        }
         if(v == logout){
             signOut();
         }
@@ -54,12 +77,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         if(v==shop){
             openShop();
         }
-  }
-   private void openProfile(){
-       Intent intent = new Intent(MenuActivity.this,profileActivity.class);
-       Toast.makeText(MenuActivity.this,"Welcome to your profile",Toast.LENGTH_SHORT).show();
+    }
+    private void openProfile(){
+        Intent intent = new Intent(MenuActivity.this,profileActivity.class);
+        Toast.makeText(MenuActivity.this,"Welcome to your profile",Toast.LENGTH_SHORT).show();
         startActivity(intent);
-  }
+    }
     private void signOut(){
         AuthUI.getInstance().signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
