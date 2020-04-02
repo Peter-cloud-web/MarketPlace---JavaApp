@@ -21,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
         @Override
-        public void ru() {
+        public void run() {
             rLayout.setVisibility(View.VISIBLE);
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
